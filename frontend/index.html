@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Fixtures</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header>
+        <h1>Upcoming Football Matches</h1>
+        <div class="header-controls">
+            <button id="download-csv" class="btn-primary">Download as CSV</button>
+            <div class="last-updated">
+                Last updated: <span id="update-time">Loading...</span>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="filters">
+            <div class="filter-group">
+                <label for="league-filter">Filter by League:</label>
+                <select id="league-filter">
+                    <option value="all">All Leagues</option>
+                    <!-- Will be populated by JavaScript -->
+                </select>
+            </div>
+        </div>
+        
+        <div class="fixtures-container">
+            <div id="fixtures-list" class="fixtures-list">
+                <div class="loading">Loading upcoming matches...</div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Football Fixtures | Data updates every 24 hours</p>
+    </footer>
+    
+    <script src="js/main.js"></script>
+    <script src="js/export.js"></script>
+</body>
+</html>

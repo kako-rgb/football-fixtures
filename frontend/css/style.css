@@ -1,0 +1,231 @@
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --background-color: #f5f7fa;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --border-color: #e0e0e0;
+    --win-color: #27ae60;
+    --draw-color: #f39c12;
+    --loss-color: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.header-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.last-updated {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+.filters {
+    background-color: var(--card-color);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-group label {
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.filter-group select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: white;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.fixtures-container {
+    background-color: var(--card-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.fixtures-list {
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: 0.5rem;
+}
+
+.fixture-card {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.2rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s;
+}
+
+.fixture-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.fixture-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.league-name {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.match-time {
+    font-weight: 600;
+}
+
+.teams-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+}
+
+.team-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 0.8rem;
+}
+
+.team-name {
+    font-weight: 600;
+    text-align: center;
+}
+
+.versus {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.form-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-title {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.form-results {
+    display: flex;
+    gap: 5px;
+}
+
+.form-result {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.win {
+    background-color: var(--win-color);
+}
+
+.draw {
+    background-color: var(--draw-color);
+}
+
+.loss {
+    background-color: var(--loss-color);
+}
+
+.loading, .error, .no-matches {
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.8rem;
+}
